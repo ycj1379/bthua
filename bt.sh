@@ -698,7 +698,7 @@ echo "
 +----------------------------------------------------------------------
 | 宝塔面板一键安装脚本(For Railway Cloud,Debian or Ubuntu Linux)
 +----------------------------------------------------------------------
-| Copyright © Ice Year 的位面(https://dev-iceyear.pantheonsite.io/)
+| Copyright © Ice Year 的位面 (https://iceyear.ml/)
 +----------------------------------------------------------------------
 | 安装完后，请牢记输出的用户名和密码!!!
 +----------------------------------------------------------------------
@@ -715,7 +715,7 @@ echo -e "\033[32mCongratulations! Installed successfully!\033[0m"
 echo -e "=================================================================="
 echo  "外网面板地址(假的): http://${getIpAddress}:${panelPort}${auth_path}"
 echo  "内网面板地址(假的): http://${LOCAL_IP}:${panelPort}${auth_path}"
-echo  "其实，railway云里这些都是假的，请访问你实例的域名来查看宝塔面板(by ice year)"
+echo  "其实，railway云里这些都是假的，请访问你实例的域名来查看宝塔面板(by Ice Year)"
 echo -e "用户名(牢记!): $username"
 echo -e "密码(牢记!): $password"
 echo -e "\033[33mIf you cannot access the panel,\033[0m"
