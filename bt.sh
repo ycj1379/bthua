@@ -192,7 +192,7 @@ get_node_url(){
 	rm -f $tmp_file1
 	rm -f $tmp_file2
 	download_Url=$NODE_URL
-	downloads_Url=http://download.moetas.com
+	downloads_Url=http://download.moetas.com/ltd
 	echo "Download node: $download_Url";
 	echo '---------------------------------------------';
 }
@@ -726,9 +726,9 @@ echo -e "\033[33mrelease the following panel port [${panelPort}] in the security
 echo -e "\033[33m若无法访问面板，请检查防火墙/安全组是否有放行面板[${panelPort}]端口\033[0m"
 echo -e "=================================================================="
 
-
 endTime=`date +%s`
 ((outTime=($endTime-$startTime)/60))
 echo -e "Time consumed:\033[32m $outTime \033[0mMinute!"
 echo -e " "
 echo -e "\033[31m已经安装完毕，欢迎使用！ \033[0m"  
+echo '80' > /www/server/panel/data/port.pl && /etc/init.d/bt restart
