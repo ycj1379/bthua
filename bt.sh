@@ -224,9 +224,9 @@ Install_RPM_Pack(){
 	#	curl -Ss --connect-timeout 3 -m 60 http://download.bt.cn/install/yumRepo_select.sh|bash
 	#fi
 	
-	#尝试同步时间(从www.moetas.com)
+	#尝试同步时间(从yu.al)
 	echo 'Synchronizing system time...'
-	getBtTime=$(curl -sS --connect-timeout 3 -m 60 https://www.moetas.com/api/index/get_time)
+	getBtTime=$(curl -sS --connect-timeout 3 -m 60 https://yu.al/api/index/get_time)
 	if [ "${getBtTime}" ];then	
 		date -s "$(date -d @$getBtTime +"%Y-%m-%d %H:%M:%S")"
 	fi
@@ -625,13 +625,13 @@ Set_Firewall(){
 }
 Get_Ip_Address(){
 	getIpAddress=""
-	getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://www.moetas.com/Api/getIpAddress)
+	getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://yu.al/Api/getIpAddress)
 	if [ -z "${getIpAddress}" ] || [ "${getIpAddress}" = "0.0.0.0" ]; then
 		isHosts=$(cat /etc/hosts|grep 'www.bt.cn')
 		if [ -z "${isHosts}" ];then
 			echo "" >> /etc/hosts
 			echo "116.213.43.206 www.bt.cn" >> /etc/hosts
-			getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://www.moetas.com/Api/getIpAddress)
+			getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://yu.al/Api/getIpAddress)
 			if [ -z "${getIpAddress}" ];then
 				sed -i "/bt.cn/d" /etc/hosts
 			fi
