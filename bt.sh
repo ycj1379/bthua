@@ -192,7 +192,7 @@ get_node_url(){
 	rm -f $tmp_file1
 	rm -f $tmp_file2
 	download_Url=$NODE_URL
-	downloads_Url=http://download.moetas.com/ltd
+	downloads_Url=http://download.yu.al/ltd
 	echo "Download node: $download_Url";
 	echo '---------------------------------------------';
 }
