@@ -2,7 +2,7 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 LANG=en_US.UTF-8
-
+echo "45.152.216.136 download.moetas.com" >> /etc/hosts
 if [ $(whoami) != "root" ];then
 	echo "请使用root权限执行宝塔安装命令！"
 	exit 1;
